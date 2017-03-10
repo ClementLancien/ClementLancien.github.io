@@ -1,0 +1,316 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Automate Cellulaire</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body class="left-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper" class="wrapper">
+					<div id="header">
+
+						<!-- Logo -->
+							<div id="logo">
+								<h1><a href="index.html">Automate Cellulaire</a></h1>
+								<p>Université de Rennes 1 - Master 1 BIG - UE PRJ </p>
+								<p>Promo 2016 </p>
+							</div>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li class="current"><a href="index.html">Accueil</a></li>
+									<li>
+										<a href="Regle.html">Projet</a>
+										<ul>
+											<li><a href="Projet.html">Spécification des besoins</a></li>
+											<ul>
+												<li><a href="Projet.html">Le déplacement</a></li>
+												<li><a href="Energie.html">L'énergie</a></li>
+												<li><a href="Virus.html">Les virus</a></li>
+												<li><a href="Clonage.html">Le clonage</a></li>
+											</ul>	
+											<li><a href="Regle.html">Les règles</a></li>	
+											<li><a href="AC.html">Analyse et Conception</a></li>
+											<li><a href="Stat.html">Test statistiques</a></li>
+										</ul>
+									</li>
+									<li><a href="">Tutoriel</a></li>
+									<li><a href="#aboutus">About us</a></li>
+									<li><a href="#Contact">Nous contacter</a></li>
+								</ul>
+							</nav>
+
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style2">
+					<div class="title">Tests Statistiques</div>
+					<div id="main" class="container">
+						<div class="row 150%">
+							<div class="4u 12u(mobile)">
+
+								<!-- Sidebar -->
+									<div id="sidebar">
+										<section class="box">
+											<header>
+												<h2>Test statistique</h2>
+											</header>
+											<p>En statistiques, un test d'hypothèse est une démarche consistant à rejeter ou à ne pas rejeter (rarement accepter) une hypothèse statistique, appelée hypothèse nulle, en fonction d'un jeu de données (échantillon). Il s’agit de statistique inférentielle : à partir de calculs réalisés sur des données observées, nous émettons des conclusions sur la population, en leur rattachant des risques de se tromper.</p>
+											<a href="https://fr.wikipedia.org/wiki/Test_(statistique)" class="button style1">Plus d'informations</a>
+										</section>
+									</div>
+
+							</div>
+							<div class="8u 12u(mobile) important(mobile)">
+
+								<!-- Content -->
+									<div id="content">
+										<article class="box post">
+
+										
+											<p>Dans le cadre de ce projet, nous avons réalisés de deux types de sorties différents.</p>
+											<ol>
+												<li>Dans le premier fichier, l'univers est une matrice carré de taille 30. La probabilité des cellules contenu dans l'univers était de 10%. La probabilité d'énergie au départ de 100%. La probabilité était de 0. Les données utilisées sont celles de la 150eme générations. L'univers ne se renouvelle pas en énergie</li>
+												
+												<li>Dans le deuxième fichier, l'univers est aussi une matrice carré de taille 30. La probabilité des cellules contenu dans l'univers était de 10%. La probabilité d'énergie au départ de 1%. La probabilité des virus était de 0. Les données utilisées sont celles de la 150eme générations. L'univers se renouvelle en énergie</li>
+											</ol>
+											<p>
+												Le clustering est une méthode très intéressante pour étudier la structure et le groupement de nos données. Il est généralement basé sur la similarité ou la distance entre les objets.
+											</p>
+											<p>
+												Dans notre cas, nous avons utilisés Le partitionnement en <a href="https://fr.wikipedia.org/wiki/K-moyennes">k-moyennes</a> qui est une méthode de partitionnement de données et un problème d'optimisation combinatoire. Ici le nombre de k a été fixé a 4.
+												Dans cette étude, la probabilité de déplacement de plusieurs centaines de cellules vont être mesurée.
+
+											</p>
+
+											<header class="style1">
+												<h2>Cluster sur le fichier 1</h2>
+												<br/>
+												<img src="images/cluster1.png" alt="Cluster sur le fichier 1">
+											</a>
+											</header>
+											<p>
+												Nos données possèdent une structure hiérarchique c’est-à-dire que nos groupes possèdent des sous-groupes mutuelles. 
+												Ceci va être visualisé dans une structure appelé dendrogramme qui présente un chemin intuitif pour visualiser la structure hiérarchique.
+											</p>
+											<header class="style1">
+												<h2>ClusPlot sur le fichier 1</h2>
+												<br/>
+												<img src="images/cluster1g.png" alt="Cluster sur le fichier 1">
+											</a>
+											</header>
+											<p>Cette figure montre la classification de ces 4 clusters, les cellules sont regroupés en 4 clusters en fonction de leurs probabilité de déplacement. Ces données ont été obtenir à partir du package <a href="https://cran.r-project.org/web/packages/mclust/mclust.pdf">mclust</a>.</p>
+										
+											<header class="style1">
+												<h2>Évolution des cellules sur 150 générations</h2>
+												<br/>
+												<img src="images/dcellule.png" alt="Évolution des cellules sur 150 générations">
+												<p>Distribution des cellules sur 150 générations sans renouvellement d'énergie dans l'univers </p>
+											</a>
+											</header>
+											<p>On remarque que les cellules évoluent différemment au cours du temps.</p>
+										
+										
+
+										
+
+
+
+											<header class="style1">
+												<h2>Cluster sur le fichier 2</h2>
+												<br/>
+												<img src="images/cluster2.png" alt="Cluster sur le fichier 2"
+											</a>
+											</header>
+												<p>
+												Nos données possèdent une structure hiérarchique c’est-à-dire que nos groupes possèdent des sous-groupes mutuelles. 
+												Ceci va être visualisé dans une structure appelé dendrogramme qui présente un chemin intuitif pour visualiser la structure hiérarchique.
+											</p>
+											
+
+											<header class="style1">
+												<h2>Model-based clustering plots: classification sur le fichier 2</h2>
+												<br/>
+												<img src="images/cluster2g.png" alt="Model-based clustering plots: classification sur le fichier 2">
+												<p>Distribution des cellules par comparaison des probabibilités déplacement deux à deux</p>
+											</a>
+											</header>
+											
+											<header class="style1">
+												<h2>Évolution des cellules sur 150 générations</h2>
+												<br/>
+												<img src="images/dcellule2.png" alt="Évolution des cellules sur 150 générations">
+												<p>Distribution des cellules sur 150 générations avec renouvellement d'énergie dans l'univers </p>
+											</a>
+											</header>
+											<p>On remarque que les cellules évoluent différemment au cours du temps. En fonction de l’énergie qui a été ajouté dans notre automate.</p>
+
+										</article>
+									</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Highlights -->
+				<div class="wrapper style3">
+					<div class="title" id="aboutus">Bio-Informaticiens</div>
+					<div id="highlights" class="container">
+						<div class="row 150%">
+							<div class="4u 12u(mobile)">
+								<section class="highlight">
+									<a href="#" class="image featured"><img src="images/CL.jpg" alt="Clément Lancien" /></a>
+									<h3><a href="#">Clément LANCIEN</a></h3>
+									<p>
+										Étudiant en première année du master de Bio-informatique et Génomique à l'Université de Rennes 1
+									</p>
+									<ul class="actions">
+										<li><a href="Projet.html" class="button style1">Plus d'informations</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="4u 12u(mobile)">
+								<section class="highlight">
+									<a href="#" class="image featured"><img src="images/AK.png" alt="Ali KACHALO"/></a>
+									<h3><a href="#">Ali KACHALO</a></h3>
+									<p>
+										Étudiant en première année du master de Bio-informatique et Génomique à l'Université de Rennes 1
+									</p>
+									<ul class="actions">
+										<li><a href="#" class="button style1">Plus d'informations</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="4u 12u(mobile)">
+								<section class="highlight">
+									<a href="#" class="image featured"><img src="images/HC.jpg" alt="Hans CERIL" /></a>
+									<h3><a href="#">Hans CERIL</a></h3>
+									<p>
+										Étudiant en première année du master de Bio-informatique et Génomique à l'Université de Rennes 1
+									</p>
+									<ul class="actions">
+										<li><a href="#" class="button style1">Plus d'informations</a></li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer-wrapper" class="wrapper">
+					<div class="title" id ="Contact">Nous contacter</div>
+					<div id="footer" class="container">
+						<header class="style1">
+							<h2></h2>
+							<p>
+								Vous recherchez des informations supplémentaires? Contactez nous !!
+							</p>
+						</header>
+						<hr />
+						<div class="row 150%">
+							<div class="6u 12u(mobile)">
+
+								<!-- Contact Form -->
+									<section>
+										<form method="post" action="#">
+											<div class="row 50%">
+												<div class="6u 12u(mobile)">
+													<input type="text" name="name" id="contact-name" placeholder="Nom Prénom" />
+												</div>
+												<div class="6u 12u(mobile)">
+													<input type="text" name="email" id="contact-email" placeholder="Email" />
+												</div>
+											</div>
+											<div class="row 50%">
+												<div class="12u">
+													<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
+												</div>
+											</div>
+											<div class="row">
+												<div class="12u">
+													<ul class="actions">
+														<li><input type="submit" class="style1" value="Envoyer" /></li>
+														<li><input type="reset" class="style2" value="Réinitialiser" /></li>
+													</ul>
+												</div>
+											</div>
+										</form>
+									</section>
+
+							</div>
+							<div class="6u 12u(mobile)">
+
+								<!-- Contact -->
+									<section class="feature-list small">
+										<div class="row">
+											<div class="6u 12u(mobile)">
+												<section>
+													<h3 class="icon fa-home">Adresse</h3>
+													<p>
+														Université de Rennes 1<br/>
+														Rue de Thabor<br/>
+														35000 Rennes<br/>
+														FRANCE
+													</p>
+												</section>
+											</div>
+											<div class="6u 12u(mobile)">
+												<section>
+													<h3 class="icon fa-comment">Master</h3>
+													<p>
+														<a href="https://etudes.univ-rennes1.fr/master-biogeno">Master BIG - Rennes 1</a>
+													</p>
+												</section>
+											</div>
+										</div>
+										<div class="row">
+											<div class="6u 12u(mobile)">
+												<section>
+													<h3 class="icon fa-envelope">Email</h3>
+													<p> clement.lancien</p>
+													<p> kachalo.ali</p>
+													<p> ceril.hans</p>
+													<p>@univ-rennes1.fr</p>
+												</section>
+											</div>
+											<div class="6u 12u(mobile)">
+												<section>
+													<h3 class="icon fa-phone">Téléphone</h3>
+													<p>
+														Pas disponible pour le moment :)
+													</p>
+												</section>
+											</div>
+										</div>
+									</section>
+
+							</div>
+						</div>
+						<hr />
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
